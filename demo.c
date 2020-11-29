@@ -23,8 +23,8 @@ int main()
 
     while(1) // Infinite loop
     {
-        _delay_ms(500);  // Delay for 500 ms
         tbi(PORTB, PB0); // the toggling takes place here
+        asm("nop");
     }
 
     return 0;
