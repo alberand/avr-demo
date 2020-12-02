@@ -3,7 +3,10 @@
 From the `atmega328p` datasheet from "Instruction Set Summary" we can get number
 of clocks per each instruction:
 
-```text
+```shell
+$ avr-objdump -h -S demo.elf > demo.lst
+$ cat demo.lst
+...
 # 1 cycle
   88:	85 b1       	in	r24, 0x05	; 5
 # 1 cycle
@@ -14,6 +17,7 @@ of clocks per each instruction:
   8e:	00 00       	nop
 # 2 cycle
   90:	fb cf       	rjmp	.-10     	; 0x88 <main+0x8>
+...
 ```
 
 Clock frequency is 16MHz
