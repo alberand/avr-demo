@@ -6,8 +6,6 @@
 
 #define F_CPU 16000000UL // Crystal frequency required for delay functions
 
-#include <util/delay.h> // Delay functions
-
 #define sbi(x, y) x |= _BV(y)                // set bit - using bitwise OR operator
 #define cbi(x, y) x &= ~(_BV(y))             // clear bit - using bitwise AND operator
 #define tbi(x, y) x ^= _BV(y)                // toggle bit - using bitwise XOR operator
